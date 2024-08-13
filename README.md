@@ -1,2 +1,2 @@
 # COSC4370
-Interactive Computer Graphics
+pip install pyopengl pyopengl-accelerate pyopengltk pygame numpy pywavefront

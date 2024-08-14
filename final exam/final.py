@@ -17,7 +17,6 @@ edges = ((0,1), (0,3), (0,4), (2,1), (2,3), (2,7), (6,3), (6,4),
 texture_coords = [((0, 0.5), (0.333, 0.5), (0.333, 1), (0, 1)),
                   ((0.333, 0.5), (0.666, 0.5), (0.666, 1), (0.333, 1)),
                   ((0.666, 0), (1, 0), (1, 0.5), (0.666, 0.5)),
-                  
                   ((0.333, 0), (0.666, 0), (0.666, 0.5), (0.333, 0.5)),
                   ((0, 0), (0.333, 0), (0.333, 0.5), (0, 0.5)),
                   ((0.666, 0.5), (1, 0.5), (1, 1), (0.666, 1))
@@ -86,7 +85,7 @@ glMatrixMode(GL_MODELVIEW)
 glTranslatef(0, 0, -8)
 
 
-glLight(GL_LIGHT0, GL_POSITION,  (0, -10, -3, 1)) # point light from the below
+glLight(GL_LIGHT0, GL_POSITION,  (0, -10, 0, 1)) # point light from the below
 glLightfv(GL_LIGHT0, GL_AMBIENT, (0, 0, 0, 0.2))
 glLightfv(GL_LIGHT0, GL_DIFFUSE, (1, 1, 1, 1))
 
@@ -124,7 +123,7 @@ while run:
 
     glPushMatrix()
     angle = (angle + 1) % 360
-    glRotatef(angle, 3, 1, 1)
+    glRotatef(angle, 1, 1, 1)
     Cube(texture_coords)
 
     glPopMatrix()

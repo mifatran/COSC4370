@@ -68,6 +68,7 @@ def main():
     gluPerspective(45, (display[0]/display[1]), 0.1, 50.0)
 
     glMatrixMode(GL_MODELVIEW)
+    
     glTranslatef(0, 0, -5)
 
     glLight(GL_LIGHT0, GL_POSITION,  (10, -20, 5, 1)) # point light from the below
